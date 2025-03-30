@@ -27,7 +27,7 @@ def blog_generate_using_bedrock(blogtopic:str)-> str:
         blog_details=response_data['generation']
         return blog_details
     except Exception as e:
-        print(f"error generating the code {e}")
+        print(f"error generating the code for blog {e}")
         return ""
 
 def save_blog_details_s3(s3_key,s3_bucket,generate_blog):
